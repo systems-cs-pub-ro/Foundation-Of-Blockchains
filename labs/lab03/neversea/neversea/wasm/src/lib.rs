@@ -5,10 +5,11 @@
 #![no_std]
 
 elrond_wasm_node::wasm_endpoints! {
-    adder
+    neversea
     (
-        add
-        getSum
+        getParticipants
+        getRegistrationFee
+        register
     )
 }
 
