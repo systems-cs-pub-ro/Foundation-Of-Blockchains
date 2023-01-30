@@ -45,7 +45,7 @@ localMint() {
         --proxy=${PROXY} --chain=${CHAIN_ID} \
         --value=0 \
         --function="ESDTLocalMint" \
-        --arguments name} ${token_identifier} ${token_decimals} \
+        --arguments ${token_identifier} ${token_decimals} \
         --send || return
 }
 
