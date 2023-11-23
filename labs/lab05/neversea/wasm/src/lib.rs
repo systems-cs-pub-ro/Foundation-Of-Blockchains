@@ -6,10 +6,13 @@
 
 // Init:                                 1
 // Endpoints:                           11
-// Async Callback:                       1
+// Async Callback (empty):               1
 // Total number of exported functions:  13
 
 #![no_std]
+
+// Configuration that works with rustc < 1.73.0.
+// TODO: Recommended rustc version: 1.73.0 or newer.
 #![feature(lang_items)]
 
 multiversx_sc_wasm_adapter::allocator!();
@@ -18,17 +21,19 @@ multiversx_sc_wasm_adapter::panic_handler!();
 multiversx_sc_wasm_adapter::endpoints! {
     neversea
     (
-        register
-        update_registration_fees
-        withdraw_funds
-        issue_nft
-        mint_nft
-        getParticipants
-        getVipParticipants
-        getRegistrationFee
-        getRegistrationFeeVip
-        participantToken
-        participantTokenName
-        callBack
+        init => init
+        register => register
+        update_registration_fees => update_registration_fees
+        withdraw_funds => withdraw_funds
+        issue_nft => issue_nft
+        mint_nft => mint_nft
+        getParticipants => participants
+        getVipParticipants => vip_participants
+        getRegistrationFee => registration_fee
+        getRegistrationFeeVip => registration_fee_vip
+        participantToken => participant_token
+        participantTokenName => participant_token_name
     )
 }
+
+multiversx_sc_wasm_adapter::async_callback_empty! {}

@@ -3,12 +3,11 @@ name = "neversea-meta"
 version = "0.0.0"
 edition = "2018"
 publish = false
-authors = [ "you",]
+authors = ["you"]
 
 [dev-dependencies]
-
 [dependencies.neversea]
 path = ".."
 
 [dependencies.multiversx-sc-meta]
-version = "0.41.0"
+version = "0.44.0"
