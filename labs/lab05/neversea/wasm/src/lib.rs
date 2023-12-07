@@ -5,9 +5,9 @@
 ////////////////////////////////////////////////////
 
 // Init:                                 1
-// Endpoints:                           11
+// Endpoints:                            4
 // Async Callback (empty):               1
-// Total number of exported functions:  13
+// Total number of exported functions:   6
 
 #![no_std]
 
@@ -24,15 +24,8 @@ multiversx_sc_wasm_adapter::endpoints! {
         init => init
         register => register
         update_registration_fees => update_registration_fees
-        withdraw_funds => withdraw_funds
-        issue_nft => issue_nft
-        mint_nft => mint_nft
         getParticipants => participants
-        getVipParticipants => vip_participants
         getRegistrationFee => registration_fee
-        getRegistrationFeeVip => registration_fee_vip
-        participantToken => participant_token
-        participantTokenName => participant_token_name
     )
 }
 
